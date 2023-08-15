@@ -1,0 +1,16 @@
+.nav {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    margin-left: -300px;
+    background-image: var(--background-img-sec);
+    box-shadow: 6px 0 8px 0 rgba(0, 0, 0, 0.6);
+    transition: margin .4s;
+    z-index: 10;
+}
+
+.nav:hover {
+    margin-left: 0;
+}

@@ -13,5 +13,11 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  },
+  {
+    resolve: "gatsby-plugin-layout",
+    options: {
+      component: require.resolve("./src/layouts/layout.jsx")
+    }
   }]
 };

@@ -1,0 +1,34 @@
+:root {
+    --color-main-bright-blue: #6FFFE9;
+    --color-main-light-blue: #89B9E6;
+    --color-main-dark-blue: #101935;
+    --color-main-purple: #9242FA;
+    --color-main-orange: #F59300;
+
+    --background-img: radial-gradient(farthest-corner at top right , #4E2C92 0%, #37256F 20%, var(--color-main-dark-blue) 100%);
+    --background-img-sec: linear-gradient(to bottom left, #1B1F29, #091024);
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.global {
+    position: absolute;
+    display: grid;
+    width: 100%;
+}
+
+.background {
+    position: fixed;
+    background-image: var(--background-img);
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    
+    margin-left: 100px;
+}
