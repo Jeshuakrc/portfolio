@@ -5,6 +5,7 @@
     --color-main-purple: #9242FA;
     --color-main-orange: #F59300;
 
+    --color-transparent-dark-blue: #10193599;
     --background-img: radial-gradient(farthest-corner at top right , #4E2C92 0%, #37256F 20%, var(--color-main-dark-blue) 100%);
     --background-img-sec: linear-gradient(to bottom left, #1B1F29, #091024);
 }

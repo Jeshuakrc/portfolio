@@ -1,11 +1,10 @@
 import React, { Fragment } from "react"
-import HomeSection from "../sections/homeSection"
+import Landing from "../sections/landing"
 
 
 const IndexPage = () => {
   return <Fragment>
-    <HomeSection />
-    <HomeSection />
+    <Landing />
   </Fragment>
 }
 
