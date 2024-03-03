@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'consola';
+    src: url(../../content/fonts/consola.ttf);
+}
+
 :root {
     --color-main-bright-blue: #6FFFE9;
     --color-main-light-blue: #89B9E6;
@@ -30,6 +35,15 @@ html, body {
 }
 
 main {
-    
     margin-left: 100px;
+}
+
+.consolaText {
+    font-family: 'consola';
+    font-size: 18pt;
+    color: var(--color-main-light-blue);
+}
+
+.consolaText strong {
+    color: var(--color-main-orange);
 }

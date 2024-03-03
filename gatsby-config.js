@@ -6,18 +6,22 @@ module.exports = {
     title: `portfolio`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    "gatsby-plugin-mdx",
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "content",
+        "path": "./content"
+      },
+      __key: "content"
     },
-    __key: "pages"
-  },
-  {
-    resolve: "gatsby-plugin-layout",
-    options: {
-      component: require.resolve("./src/layouts/layout.jsx")
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/layouts/layout.jsx")
+      }
     }
-  }]
+  ]
 };

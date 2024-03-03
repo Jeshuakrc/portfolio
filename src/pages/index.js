@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import Landing from "../sections/landing"
+import { graphql } from "gatsby"
 
 
 const IndexPage = () => {

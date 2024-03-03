@@ -5,10 +5,21 @@
     background-color: var(--color-transparent-dark-blue);
     border-radius: 30px;
     overflow: hidden;
+    display: inline-flex;
 }
 
 .landingDialog .sidebar {
     width: 6%;
     height: 100%;
     background-color: var(--color-main-dark-blue);
+}
+
+.landingDialog div p {
+    margin-left: 8pt;
+    content: "> ";
+}
+
+.landingDialog div p::before {
+    content: ">";
+    margin-right: 8pt;
 }
