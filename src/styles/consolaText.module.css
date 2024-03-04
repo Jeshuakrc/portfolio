@@ -1,0 +1,19 @@
+.consolaText,
+.consolaText > * {
+    font-family: 'consola';
+    font-size: 18pt;
+    color: var(--color-main-light-blue);
+    margin: 8pt;
+}
+
+.consolaText{}
+
+.consolaText > strong {
+    color: var(--color-main-orange);
+}
+
+.consolaText::before,
+.consolaText > *::before {
+    content: ">";
+    margin-right: 8pt;
+}

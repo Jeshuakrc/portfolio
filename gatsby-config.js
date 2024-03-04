@@ -13,14 +13,23 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "content",
-        "path": "./content"
-      },
-      __key: "content"
+        "path": "./content/locales"
+      }
     },
     {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/layouts/layout.jsx")
+      }
+    },
+    { 
+      resolve: "gatsby-plugin-react-i18next",
+      options: {
+        localeJsonSourceName: "content",
+        localeJsonNodeName: "locales",
+        languages: ["en","es"],
+        defaultLanguage: "en",
+        fallbackLanguage: "en"
       }
     }
   ]
