@@ -1,19 +1,32 @@
-.consolaText,
-.consolaText > * {
-    font-family: 'consola';
-    font-size: 18pt;
+.consolaText {
+
     color: var(--color-main-light-blue);
-    margin: 8pt;
+    align-items: top;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 16px;
+    height: fit-content;
+    padding: 8px;
 }
 
-.consolaText{}
+.consolaText * {
+    margin: 0;
 
-.consolaText > strong {
+}
+
+.consolaText strong {
     color: var(--color-main-orange);
 }
 
-.consolaText::before,
-.consolaText > *::before {
+.consolaText .preLine {
+    width: fit-content;
+}
+
+.consolaText .preLine::before {
+    display: block;
+    margin-right: 24px;
+    align-items: center;
+    font-size: 24px;
+    opacity: 60%;
     content: ">";
-    margin-right: 8pt;
 }

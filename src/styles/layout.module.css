@@ -17,9 +17,10 @@
     --background-img-sec: linear-gradient(to bottom left, #1B1F29, #091024);
 }
 
-html, body {
+body {
     margin: 0;
     height: 100%;
+    font-family: 'consola';
 }
 
 .global {
@@ -38,10 +39,4 @@ html, body {
 
 main {
     margin-left: 100px;
-}
-
-.button {
-    background-image: var(--color-gradient-light-blue);
-    border-radius: 15px;
-    color: var(--color-main-dark-blue);
 }

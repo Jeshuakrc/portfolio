@@ -31,6 +31,11 @@ module.exports = {
         defaultLanguage: "en",
         fallbackLanguage: "en"
       }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+      }
     }
   ]
 };
