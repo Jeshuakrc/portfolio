@@ -5,7 +5,11 @@ const PreLine = () => <span className={Styles.preLine} > </ span>
 
 export default (props) => {
 
-    const { children, padding } = props;
+    let { children, padding } = props;
+
+    if (!Array.isArray(children)) {
+        children = [children];
+    }
 
     return <div className={Styles.consolaText} style={{padding: padding ?? "8px"}}>
         { children.map(c =>

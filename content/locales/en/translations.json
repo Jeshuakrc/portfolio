@@ -2,7 +2,8 @@
     "landing_p1": "Hey! this is <strong>{{name}}</strong>.",
     "landing_p2": "I'm a <strong>Softare Enginer</strong> 💻",
     "landing_p3": "Get to know me better!",
-    "landing_p4": "Tanks for visiting my site :)",
+    "landing_p4": "Also check out:",
+    "landing_p5": "Tanks for visiting my site :)",
     "landling_button_abbout_me": "About me",
     "landling_button_my_cv": "My CV"
 }

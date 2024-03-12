@@ -6,7 +6,13 @@ import ConsolaText from "../components/ConsolaText";
 import ProjectButton from "../components/ProjectButton.jsx";
 import { Type as ButtonType } from "../components/ProjectButton.jsx";
 import DownloadIcon from "../icons/download-fill.svg";
+import GithubIcon from "../icons/github.svg";
+import LinkedinIcon from "../icons/linkedin.svg";
 
+
+
+const linkedinURL = "https://www.linkedin.com/in/jeshuakrc/";
+const githubURL = "https://github.com/Jeshuakrc";
 
 export default function() {
     
@@ -38,8 +44,16 @@ export default function() {
                 </div>
 
                 <ConsolaText padding={padding}>
-                    <p></p>
                     <p><Trans>landing_p4</Trans></p>
+                </ConsolaText>
+
+                <div className={Styles.buttonContainer}>
+                    <a href={githubURL} target="_blank"><GithubIcon /></a>
+                    <a href={linkedinURL} target="_blank"><LinkedinIcon /></a>
+                </div>
+
+                <ConsolaText padding={padding}>
+                    <p><Trans>landing_p5</Trans></p>
                 </ConsolaText>
 
             </div>
