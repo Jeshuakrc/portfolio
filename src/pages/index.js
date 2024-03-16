@@ -11,8 +11,10 @@ import GithubIcon from "../icons/github.svg";
 import LinkedinIcon from "../icons/linkedin.svg";
 
 
+
 const linkedinURL = "https://www.linkedin.com/in/jeshuakrc/";
 const githubURL = "https://github.com/Jeshuakrc";
+
 
 const IndexPage = () => {
 
@@ -61,10 +63,9 @@ const IndexPage = () => {
   </header> </div>
 }
 
+
 export default IndexPage
-
-export const Head = () => <title>Home Page</title>
-
+export const Head = () => <title><Trans>landing_title</Trans></title>
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(filter: {language: {eq: $language}}) {

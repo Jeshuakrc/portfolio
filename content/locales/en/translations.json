@@ -1,4 +1,5 @@
 {
+    "landing_title": "Home",
     "landing_p1": "Hey! this is <strong>{{name}}</strong>.",
     "landing_p2": "I'm a <strong>Softare Enginer</strong> 💻",
     "landing_p3": "Get to know me better!",

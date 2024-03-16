@@ -1,0 +1,13 @@
+.aboutWrapper .floatingDialog{
+    height: 100vh;
+    padding: 16px;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+.aboutWrapper{
+
+}
