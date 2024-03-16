@@ -1,17 +1,17 @@
+.indexWrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
 .landingDialog {
     width: 800px;
     height: 600px;
     margin-left: 20%;
-    background-color: var(--color-transparent-dark-blue);
-    border-radius: 30px;
-    overflow: hidden;
-    display: inline-flex;
 }
 
 .landingDialog .sidebar {
     width: 6%;
-    height: 100%;
-
     background-color: var(--color-main-dark-blue);
 }
 
