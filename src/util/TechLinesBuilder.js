@@ -3,7 +3,7 @@ export function breathFirstSearch(graph, from, to) {
     const queue = [];
 
     const start = graph.nodeAt(from.x, from.y)
-    start.value = { parent: undefined };
+    start.val = { parent: undefined };
     queue.unshift(start);
 
     let current, found;
@@ -14,8 +14,8 @@ export function breathFirstSearch(graph, from, to) {
             break;
         }
         for (let n of current.adjacents) {
-            if (n.value) { continue; }
-            n.value = {
+            if (n.val) { continue; }
+            n.val = {
                 parent: current
             };
             queue.unshift(n);
@@ -27,8 +27,10 @@ export function breathFirstSearch(graph, from, to) {
     const backtrack = [];
     while(current) {
         backtrack.push(current);
-        current = current.value?.parent;
+        current = current.val?.parent;
     }
+
+    
 
     return backtrack;
 }
