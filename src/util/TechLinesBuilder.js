@@ -13,11 +13,10 @@ export function breathFirstSearch(graph, from, to) {
             found = true;
             break;
         }
-        for (let n of current.adjacents) {
-            if (n.val) { continue; }
+        for (let n of current.getAdjacents(emptyCriteria)) {
             n.val = {
                 parent: current
-            };
+            };  
             queue.unshift(n);
         }
     }
@@ -34,3 +33,5 @@ export function breathFirstSearch(graph, from, to) {
 
     return backtrack;
 }
+
+const emptyCriteria = node => !(node.val);

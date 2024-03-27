@@ -59,6 +59,9 @@ export default class GridGraph {
         return node.val;
     }
     adjacencentsOf(x, y) {
+        return this.adjacencentsOf(x, y, () => true)
+    }
+    adjacencentsOf(x, y, criteria) {
         if (
                 x < 0
             ||  x >= this.width
@@ -70,22 +73,28 @@ export default class GridGraph {
 
         const xNodes = [], yNodes = [], diagonalNodes = [];
         
+        const checkAndPush = (nx, ny, list) => {
+            const n = this.nodeAt(nx, ny);
+            if (!criteria(n)) { return; }
+            list.push(n);
+        };
+
         if (x < (this.width - 1)) {
-            xNodes.push(this.nodeAt(x + 1, y));
+            checkAndPush(x + 1, y, xNodes);
         }
         if (x > 0) {
-            xNodes.push(this.nodeAt(x - 1 , y));
+            checkAndPush(x - 1, y, xNodes);
         }
         if (y < (this.height - 1)) {
-            yNodes.push(this.nodeAt(x, y + 1));
+            checkAndPush(x, y + 1, yNodes);
         }
         if (y > 0) {
-            yNodes.push(this.nodeAt(x, y - 1));
+            checkAndPush(x, y - 1, yNodes);
         }
 
         for(let xa of xNodes) {
             for(let ya of yNodes) {
-                diagonalNodes.push(this.nodeAt(xa.x, ya.y));
+                checkAndPush(xa.x, ya.y, diagonalNodes);
             }
         }
         
@@ -119,5 +128,8 @@ export class Node {
     }
     get emptyAdjacents() {
         return this.adjacents.filter(n => n.isEmpty);
+    }
+    getAdjacents(criteria) {
+        return this.#gridGraph.adjacencentsOf(this.#x, this.#y, criteria);
     }
 }

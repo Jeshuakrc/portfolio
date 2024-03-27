@@ -59,10 +59,12 @@ export function TechGrid(props) {
     };
 
     const conns = [
-        Connection.fromPoints(10,10,420,540),
+        Connection.fromPoints(10,60,420,540),
         Connection.fromPoints(250,200,230,625),
-        Connection.fromPoints(20,740,620,810)
-    ]
+        Connection.fromPoints(20,740,620,110),
+        Connection.fromPoints(62,540,720,710),
+        Connection.fromPoints(100,100,700,400)
+    ];
 
     return <div className={mainClassName}>
         <CircuitBoard conns={conns} />
